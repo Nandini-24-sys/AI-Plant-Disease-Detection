@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef4ec;
+}
+
+.navbar {
+    background: #2e7d32;
+    padding: 15px 30px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    padding: 30px;
+}
+
+.title {
+    text-align: center;
+    color: #2e7d32;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.upload-card, .result-card {
+    background: white;
+    padding: 25px;
+    margin: auto;
+    width: 60%;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.file-label {
+    background: #2e7d32;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.file-label input {
+    display: none;
+}
+
+.preview-box img {
+    width: 300px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.btn {
+    background: #1b5e20;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #145a1c;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.result-img {
+    width: 300px;
+    border-radius: 10px;
+}

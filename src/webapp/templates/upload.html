@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="title">Upload Plant Leaf Image</h2>
+
+<div class="upload-card">
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        
+        <label class="file-label">
+            <input type="file" name="file" id="fileInput" accept="image/*" required>
+            <span>Select Image</span>
+        </label>
+
+        <div class="preview-box">
+            <img id="previewImage" src="#" alt="Image Preview" style="display:none;">
+        </div>
+
+        <button class="btn" type="submit">Analyze Image</button>
+
+    </form>
+
+</div>
+
+<script>
+    document.getElementById("fileInput").onchange = function (event) {
+        const img = document.getElementById("previewImage");
+        img.style.display = "block";
+        img.src = URL.createObjectURL(event.target.files[0]);
+    };
+</script>
+
+{% endblock %}

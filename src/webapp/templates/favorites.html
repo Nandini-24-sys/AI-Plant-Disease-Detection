@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="mb-4" style="color:#2d6a4f;">Your Favorites</h2>
+
+<div class="row">
+{% for f in favs %}
+    <div class="col-md-4">
+        <div class="card shadow p-3 mb-4">
+            <img src="/uploads/{{ f.image_path }}" class="result-img">
+            <h5>{{ f.prediction }}</h5>
+            <p>Confidence: {{ (f.confidence * 100)|round(2) }}%</p>
+        </div>
+    </div>
+{% endfor %}
+</div>
+
+{% endblock %}
+

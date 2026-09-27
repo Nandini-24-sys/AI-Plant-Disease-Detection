@@ -1,0 +1,12 @@
+venv/
+.env
+.vscode/
+__pycache__/
+*.pyc
+
+# Large datasets
+data/
+
+# Python cache
+*.pkl
+*.tmp

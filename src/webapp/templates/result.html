@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="title">Diagnosis Result</h2>
+
+<div class="result-card">
+
+    <p class="prediction">
+        <strong>Prediction:</strong> {{ prediction }}
+    </p>
+
+    <p class="confidence">
+        <strong>Confidence:</strong> {{ confidence }}%
+    </p>
+
+    <div class="image-row">
+        <div>
+            <h3>Uploaded Image</h3>
+            <img src="{{ url_for('static', filename='uploads/' + filename) }}" class="result-img">
+        </div>
+
+        <div>
+            <h3>Grad-CAM Heatmap</h3>
+            {% if gradcam %}
+                <img src="{{ url_for('static', filename='gradcam/' + gradcam) }}" class="result-img">
+            {% else %}
+                <p>No Grad-CAM available</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <a href="/upload" class="btn">Analyze Another Image</a>
+
+</div>
+
+{% endblock %}
+
